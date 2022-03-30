@@ -38,13 +38,15 @@ public class ResultTest {
             throws Exception {
 
         Assertions.assertThrows("Randomizer is greater than 37",
-                JavaRandomizer::getRouletteResult());
+                JavaRandomizer::getRouletteResult() > 37);
 
     }
 
     @Test
     public void itThrowsExceptionWhenTheRandomizerIsLesserThan0()
             throws Exception {
+        Assertions.assertThrows("Randomizer is lesser than 0",
+                JavaRandomizer::getRouletteResult() > 0);
 
     }
 
