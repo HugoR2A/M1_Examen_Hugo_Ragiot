@@ -37,7 +37,7 @@ public class ResultTest {
     public void itThrowsExceptionWhenTheRandomizerIsGreaterThan37()
             throws Exception {
 
-        Assertions.assertThrows("Randomizer is greater than 37",
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () ->
                 JavaRandomizer::getRouletteResult() > 37);
 
     }
@@ -45,7 +45,7 @@ public class ResultTest {
     @Test
     public void itThrowsExceptionWhenTheRandomizerIsLesserThan0()
             throws Exception {
-        Assertions.assertThrows("Randomizer is lesser than 0",
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () ->
                 JavaRandomizer::getRouletteResult() > 0);
 
     }
